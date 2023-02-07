@@ -1,0 +1,89 @@
+Create a Employee Class with following properties:
+Empid
+Empname
+Salary
+Doj
+
+Methods:
+1. AcceptDetails()
+2. DisplayDetails()
+3. CalculateSalary()
+
+Create two derived classes of Employee class 
+1. Permenant
+2. Trainee
+
+In Permenant class, have following Properties:
+Basicpay
+HRA
+DA
+PF
+
+Methods:
+GetDetails()
+ShowDetails()
+CalculateSalary() method has to be overrided with new definition.
+Calculate the salary by adding basicpay, hra, da and deducting pf.
+
+In Trainee Class, have following properties:
+bonus
+Projectname
+
+Methods:
+GetTraineeDetails()
+ShowTraineeDetails()
+
+CalculateSalary() method has to be overrided with new definition
+If Projectname is "Banking" 5% of salary should be added as bonus to the salary
+If Projectname is "Insurance" 10% of salary should be added as bonus to the salary
+
+In Client program,
+
+Create instance of permenant employee and trainee and call all the relevant methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create an Interface named IEmployee which has the following methods:
+1. AcceptDetails()
+2. CalculateSalary()
+3. DisplayDetails()
+
+Implement the IEmployee interface in Permenant class and Trainee class and achieve the
+same output which was discussed earlier.
+
+
+
+
+
+
+
+
