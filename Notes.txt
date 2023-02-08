@@ -79,6 +79,40 @@ using switch case
 
 OOPS concept:
 
+1. Class - Generalization concepts - User defined datatype
+A class is an entity which has its own member variables and member functions.
+2. Object - specializaiton - instance of a class
+3. Data Encapsulation - wrapping of member variables and methods into an entity called class.
+4. Data Abstraction - Hiding of unnecessary details and projecting necessary information to the client app.
+
+Data abstraction is implemented through access specifiers:
+1. private - 
+2. protected
+3. internal - with in the same namespace 
+4. public 
+
+class member variables are private by default.
+namespace - public
+class - internal
+
+Properties: getters and setters
+public int Eid{get;set;}
+read only properties 
+
+public int Eid{get;}
+
+Inheritance
+
+virtual methods - Those methods which have definition in the base class and are allowing the derived 
+class to have their own definitions by overriding these methods in the derived class.
+
+If the reference variable is of base class and the memory is alloted of derived
+Shape s =new Rectange
+
+1. if new method is in derived class - base class method is called
+2. if override method is in derived class - derived class method is called
+
+
 
 
 
