@@ -97,6 +97,88 @@ OOPS concept:
 
 
 
+Day 3:
+
+Abstract method:
+A method without a definition or an implementation is called an abstract method.
+
+Abstract class:
+Abstract class can contain both abstract and non abstract methods.
+Abstract classes cannot be instantiated because it contains a method without a definition.
+It has to be inherited.
+
+Sealed class:
+Sealed classes cannot be inherited and has to be instantiated.
+
+Partial class:
+Definitions across multiple places within the same namespace.
+
+Static class:
+They cannot be instantiated nor be inherited.
+All the properties and methods of a static class should be static.
+
+
+Interface:
+The set of rules/specifications for an entity is defined.
+All methods and properties of an interface are public.
+If a class implements an interface, it has to define all the methods of the interface.
+
+Assemblies:
+
+build artifacts(Protable Executable(PE)) +metadata (information about itself)
+
+output of a project can be either exe or dll
+
+exe: executable file - It will have a memory of its own.OS can directly invoke the exes.
+dlls - dynamic link library - reusable piece of code which can be used across multiple projects. They will not have memory of their own. 
+They reside in the memory of the host application and when the host applications gets closed, the dlls also gets closed.
+
+
+1. To create a class lib:
+dotnet new classlib -o MyLib --> dotnet build MyLib.csproj
+
+2. exe project, give reference of dll in .csproj
+  <ItemGroup>
+    <ProjectReference Include="..\MyLib\MyLib.csproj" />
+  </ItemGroup>
+
+
+
+
+Exceptions:
+
+Debugging: launch.json - console- externalTerminal
+
+1. Syntax Error - rectified
+2. Logical Error - debugged 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
