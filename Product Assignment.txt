@@ -1,0 +1,18 @@
+Create a Product class with the following properties
+
+pid - int
+pname- string
+price - float
+qty- int
+
+create an interface IProduct which has the following methods:
+
+AddProduct() - to add a product to the list of products
+Getproducts() - to return a List of products
+RemoveProduct() - to remove a product from list
+
+Implement product class from IProduct
+
+If price is less than 0 raise exception accordingly with suitable messages
+Ensure qty should be minimum 3 for every product, else raise exception
+
