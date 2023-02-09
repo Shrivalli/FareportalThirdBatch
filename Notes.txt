@@ -112,25 +112,6 @@ Shape s =new Rectange
 1. if new method is in derived class - base class method is called
 2. if override method is in derived class - derived class method is called
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Day 3:
 
 Abstract method:
@@ -178,13 +159,40 @@ dotnet new classlib -o MyLib --> dotnet build MyLib.csproj
 
 
 
-
+Day 4:
 Exceptions:
 
 Debugging: launch.json - console- externalTerminal
 
 1. Syntax Error - rectified
-2. Logical Error - debugged 
+2. Logical Error - debugged  - breakpoint,step into (f10, down arrow), step over(f11 and jump arrow) and step out(up arrow)
+3. Runtime Error - cannot be rectified but can be handled.
+
+Using the three blocks:
+1. try
+2. catch
+3. finally
+
+Exception class is the base class from which two derived classes are inherited:
+1. SystemException - predefined or built in exceptions
+2. ApplicationException - User defined exception
+
+try block will contain those set of statements which might cause an exception. One try block can be followed by catch or finally.
+catch block is the handler in which the exceptions are handled.
+One try block can have multiple catch blocks and base class Exception catch block should be the last one.
+finally block is called irrespective of the exception occurs or not. Mostly it contains code to release the resources. 
+
+Collections:
+1. Non-generic collections - All datatype values can be stored in non generic collections.
+  ArrayList 
+  Hashtable
+2. Generic collections
+  List
+  Dictionary
+  Stack
+  Queue
+  HashSet
+
 
 
 
