@@ -193,7 +193,16 @@ Collections:
   Queue
   HashSet
 
+Day 5:
+Files:
+1. Filestream - class which has methods related to creation of files.
+2. StreamWriter/StreamWriter
 
+Delegates:
+Delegates - function pointers
+
+1. single cast delegate - which points to a single method
+2. multi cast delegate -  which can point to multiple methods.
 
 
 
