@@ -1,0 +1,36 @@
+1) Create a class library project called 'BankLibrary' with the following classes:
+* SBAccount class
+- AccountNumber
+- CustomerName
+- CustomerAddress
+- CurrentBalance
+
+* SBTransaction class
+- TransactionId
+- TransactionDate
+- AccountNumber
+- Amount
+- TransactionType
+
+* Add an interface IBankRepository with the following methods:
+public interface IBankRepository
+{
+  void NewAccount(SBAccount acc);
+  List<SBAccount> GetAllAccounts();
+  SBAccount GetAccountDetails(int accno);
+  void DepositAmount(int accno, decimal amt);
+  void WithdrawAmount(int accno, decimal amt);
+  List<SBTransaction> GetTransactions(int accno);
+}
+
+* Implement the interface in a class called "BankRepository":
+- The class should contain a collection of SBAccount class, and another collection of SBTransaction class.
+ Use generic List for both.
+- The "New Account" method must add the details of a new account to the SBAccount collection.
+- Given an account number, the "Get Details of an Account" method must return the details of the account. If the account number is not in the list, exception must be thrown.
+- The "Get Details of all Accounts" must return the details of all the accounts.
+- The "Deposit Amount" and "Withdraw Amount" methods must update the current balance in the corresponding account in the SBAccount collection, and add the details of the transaction in the SBTransaction collection.
+- If there is not enough balance in the account, then "Withdraw Amount" method must throw an exception.
+- Given an account number, the "Get Transactions of an Account" should return the details of all the transactions done by the account number.
+
+2) Create a menu-driven console application which uses the bank library.
