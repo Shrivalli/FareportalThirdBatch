@@ -1,0 +1,66 @@
+Web Applications in .NET core:
+  1. Web app (view and model)
+  2. MVC ( view model and controller)
+  3. API (model and controller)
+  
+  MVC:
+  Every request from the client is handled by the controller.
+  View is the presentation layer
+  Model is the data access layer 
+  
+  Web Site - collection of web pages (static/dynamic)
+  Web Applications - website+logic
+  
+  Web server - this can host only web sites
+  App server  can host web applications 
+  
+  IIS - is the App server which gets installed with .NET core sdk.
+  
+  dotnet run --launch-firstmvcapp https
+  dotnet dev-certs https --trust
+  
+  Views:
+  @ - Razor Syntax
+  switch between csharp and html codes.
+  The extension of views is .cshtml which can contain csharp codes and html tags
+  
+  ViewData and ViewBag are the ways in which the data is communicated between the controller action method and the view.
+  
+  The scope of viewdata and viewbag is between the corresponding action methods and the views.
+  
+  URL pattern of MVC:
+  https://localhost:portnumber/controllername/actionmethodname
+  Eg:
+  https://localhost:23442/Home/Index
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
