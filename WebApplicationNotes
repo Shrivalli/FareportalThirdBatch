@@ -33,6 +33,41 @@ Web Applications in .NET core:
   Eg:
   https://localhost:23442/Home/Index
   
+  Is MVC a 3 tier architecture - NO
+  
+  1. DAL - Model
+  2. BAL - Model
+  3. Presentation layer - View 
+  
+  Controller tries to bind the model and view.
+  
+  Entity Framework Core:
+  ORM - Object Relation Mapping
+  
+  Framework which has classes and methods to connect to the database.
+  
+  1. DbContext - front end database
+  2. DataSet - collection of records of an entity
+  DataSet<Employee> = select * from employee;
+  
+  2 approaches:
+  1. DBFirst approach:
+  For every table of back end a class gets generated in the front end. 
+  Every attribute of table gets mapped to the properties of the class
+  
+  2. Code first approach:
+  every class gets generated as table in backend
+  every property of a class is mapped as attribute of a column.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
