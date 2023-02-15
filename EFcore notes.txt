@@ -19,7 +19,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.13
 dotnet tool install -g dotnet-aspnet-codegenerator --version 6.0.11
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.11
 
-dotnet-ef dbContext scaffold "Server=.;Database=Fareportal;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+dotnet-ef dbContext scaffold "Server=.;Database=OrgWB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
 
 
 csproj file:
@@ -61,6 +61,19 @@ FareportalContext db=new FarePortalContext();
 return View(db.Departments.ToList());
 }
 
-
 Add view:
+dotnet aspnet-codegenerator view Create create -m Product -outDir Views\Product--useDefaultLayout --referenceScriptLibraries
+
+
+In appsettings.json:
+ "ConnectionStrings": {
+      "DefaultConnection": "Server=.;Database=OrgWB;Trusted_Connection=True;"
+    },
+
+ Program.cs
+ builder.Services.AddDbContext<OrgWBContext>(options =>
+       options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
 
