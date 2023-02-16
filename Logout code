@@ -1,0 +1,47 @@
+1. Program.cs
+services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+//services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
+
+2. Add a LoginPartial.cshtml in the "shared" folder of the project
+LoginPartial.cshtml
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<ul class="navbar-nav">
+    @{ 
+        ViewBag.Data = @HttpContextAccessor.HttpContext.Session.GetString("Username");
+    }
+    @if (ViewBag.Data!=null)
+    {
+ <li class="nav-item">
+            <a id="manage" class="nav-link text-dark" asp-controller="Home" asp-action="Privacy" title="Manage">Hello @ViewBag.Data!</a>
+        </li>
+        <li class="nav-item">
+            @*<form id="logoutForm" class="form-inline" asp-controller="Login"  asp-action="Logout" asp-route-returnUrl="@Url.Action("Login", "Login", new { area = "" })">*@
+            <form>
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark" asp-controller="Login" asp-action="Logout">Logout</button>
+            </form>
+            @*</form>*@
+        </li>
+    }
+else
+{
+  <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-controller="Login" asp-action="register">Register</a>
+            @*@Html.ActionLink("Register","Create","Users")*@
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-controller="Login" asp-action="login">Login</a>
+        </li>
+}
+
+3. call the "LoginPartial.cshtml" in "Layout.cshtml"
+ <partial name="LoginPartial" />
+
+4. LoginController:
+ private readonly ISession session;
+        public LoginController(OrgContext _db, IHttpContextAccessor httpContextAccessor)
+        {
+            db = _db;
+            session = httpContextAccessor.HttpContext.Session;
+        }
