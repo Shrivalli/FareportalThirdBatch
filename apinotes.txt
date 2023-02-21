@@ -1,0 +1,49 @@
+API:
+
+Application Programming interface
+
+It contains Model and controller. 
+API does not contain views.
+
+The return format of API is JSON, XML and BSON.
+
+API can support HTTP protocol. Request  and Response 
+
+REST API- Representation of State Transfer of an entity
+
+Entity - product 
+
+1. Select - HTTPget
+2. Add - HTTPPost
+3. Update - HTTPPut/HTTPPatch
+4. Delete - HTTPDelete
+
+status codes:
+200 series - success - 201- new record created, 204 - no content
+300 series - redirection
+400 series - client side error - 401 - unauthorized, 404 - page not found
+500 series - server side error - 503- service unavailable
+
+Helper methods - UnAuthorized(), Bad Request(), Not Found()
+
+Scaffold an api controller:
+>dotnet aspnet-codegenerator controller -name PrdController --relativeFolderPath Controllers -m Product -dc FareportalContext -api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
