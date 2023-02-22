@@ -1,0 +1,8 @@
+Create respective APIs and consume the APIs in HTML pages using Jquery and AJAX
+Based on the user logged in, the relevant pages should be displayed.
+UI/UX has to be neat and clean.
+Schema of the database to be displayed
+Necessary Validations has to be implemented (both in HTML and API)
+Exceptions to be handled properly and user defined messages has to be displayed
+Custom Routing has to be implemented
+Use cases taken should be with complete logic apart from CRUD operations.
